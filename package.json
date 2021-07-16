@@ -25,6 +25,8 @@
     "vue-tsc": "^0.0.24"
   },
   "husky": {
-    "pre-commit": "npm run test"
+    "hooks": {
+      "pre-commit": "npm run test"
+    }
   }
 }
