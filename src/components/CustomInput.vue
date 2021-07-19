@@ -4,7 +4,7 @@
     <input
       type="text"
       :value="modelValue"
-      @input="$emit('update:modelValue', $event.target.value)"
+      @input="handleInput"
     />
   </label>
 </template>
@@ -14,6 +14,16 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'CustomInput',
-  props: ['modelValue', 'label']
+  props: ['modelValue', 'label'],
+  emits: ['update:modelValue'],
+  setup(_, { emit }) {
+    const handleInput = (e: Event) => {
+      emit('update:modelValue', (e.target as HTMLInputElement).value)
+    }
+
+    return {
+      handleInput
+    }
+  }
 })
 </script>

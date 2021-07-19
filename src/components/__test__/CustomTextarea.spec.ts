@@ -16,8 +16,10 @@ describe('test CustomTextarea component', () => {
     const description = 'Some very long text...'
 
     await wrapper.findComponent({ ref: 'description' }).setValue(description)
-    wrapper.find('.submit').trigger('click')
+    await wrapper.find('.submit').trigger('click')
 
-    expect((wrapper.emitted('submit')![0] as any)[0]).toEqual({ description })
+    const emitted: any = wrapper.emitted('submit')![0]
+
+    expect(emitted[0]).toEqual({ modelValue: description })
   })
 })

@@ -1,6 +1,6 @@
 <template>
   <form>
-    <VTextarea v-model="description" ref="description" />
+    <VTextarea v-model="desc" ref="description" />
     <button class="submit" @click="handleClick">Send</button>
   </form>
 </template>
@@ -14,7 +14,8 @@ export default defineComponent({
   components: { VTextarea },
   emits: ['submit'],
   setup(_, { emit }) {
-    const description = ref<string>('')
+    const description = ref(null)
+    const desc = ref<string>('')
 
     const handleClick = () => {
       emit('submit', description.value)
@@ -22,6 +23,7 @@ export default defineComponent({
 
     return {
       description,
+      desc,
       handleClick
     }
   }

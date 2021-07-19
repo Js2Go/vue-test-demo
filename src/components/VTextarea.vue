@@ -7,6 +7,7 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'VTextarea',
-  props: ['modelValue']
+  props: ['modelValue'],
+  emits: ['update:modelValue']
 })
 </script>

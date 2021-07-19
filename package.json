@@ -8,7 +8,10 @@
     "test": "jest --coverage"
   },
   "dependencies": {
-    "vue": "^3.0.5"
+    "axios": "^0.21.1",
+    "vue": "^3.0.5",
+    "vue-router": "^4.0.10",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@types/jest": "^26.0.24",

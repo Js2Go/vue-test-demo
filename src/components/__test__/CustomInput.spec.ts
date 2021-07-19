@@ -5,7 +5,12 @@ let wrapper: VueWrapper<any>
 
 let CustomInput2 = {
   template: `<custom-input v-model="input" label="Text Input" class="text-input" />`,
-  components: { CustomInput }
+  components: { CustomInput },
+  data() {
+    return {
+      input: ''
+    }
+  }
 }
 
 beforeEach(() => {
