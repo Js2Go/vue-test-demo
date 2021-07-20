@@ -53,7 +53,7 @@ describe('test test test', () => {
       }
     })
 
-    console.log(wrapper.html())
+    // console.log(wrapper.html())
 
     expect(wrapper.html()).toContain('Welcome to Vue.js 3')
   })
@@ -95,7 +95,7 @@ describe('test test test2', () => {
       shallow: true
     })
 
-    console.log(wrapper.html())
+    // console.log(wrapper.html())
   })
 
   it('shallow allows opt-out of stubbing specific component', () => {
@@ -106,7 +106,7 @@ describe('test test test2', () => {
       }
     })
 
-    console.log(wrapper.html())
+    // console.log(wrapper.html())
   })
 })
 
